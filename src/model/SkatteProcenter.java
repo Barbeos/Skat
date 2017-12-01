@@ -6,7 +6,7 @@ public class SkatteProcenter {
 	private BigDecimal amtSkat;
 	private BigDecimal kommuneSkat;
 
-	public SkatteProcenter(BigDecimal kommuneSkat, BigDecimal amtSkat) {
+	public SkatteProcenter(BigDecimal kommuneSkat, BigDecimal amtSkat, BigDecimal kirkeSkat) {
 		this.kommuneSkat = kommuneSkat;
 		this.amtSkat = amtSkat;
 	}
@@ -17,6 +17,10 @@ public class SkatteProcenter {
 
 	public BigDecimal getAmtSkat() {
 		return amtSkat;
+	}
+
+	public BigDecimal getKirkeSkat() {
+		return new BigDecimal(0.2);
 	}
 	
 	
