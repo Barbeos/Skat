@@ -14,13 +14,18 @@ public class TestSkatteProcenter {
 	public void testKommuneSkat() {
 		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(24.9));
 		
-		assertEquals(24.9, sp.getKommuneSkat());
+		BigDecimal kommuneSkat = new BigDecimal(24.9);
+		
+		assertEquals(kommuneSkat, sp.getKommuneSkat());
 	}
 	
+	@Test
 	public void testKommuneSkat2() {
 		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9));
 		
-		assertEquals(23.9, sp.getKommuneSkat());
+		BigDecimal kommuneSkat = new BigDecimal(23.9);
+		
+		assertEquals(kommuneSkat, sp.getKommuneSkat());
 	}
 
 }
