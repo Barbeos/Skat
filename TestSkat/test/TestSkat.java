@@ -25,4 +25,6 @@ public class TestSkat {
 		
 		assertEquals(20000, skat.getLoen());
 	}
+	
+	
 }
