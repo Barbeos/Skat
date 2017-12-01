@@ -17,4 +17,12 @@ public class TestSkat {
 		
 		assertEquals(10000, skat.getLoen());
 	}
+	@Test
+	public void testLoen2() {
+		Skat skat = new Skat();
+		
+		skat.setLoen(20000);
+		
+		assertEquals(20000, skat.getLoen());
+	}
 }
