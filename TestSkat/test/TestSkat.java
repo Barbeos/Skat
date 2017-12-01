@@ -7,8 +7,12 @@ import org.junit.Test;
 public class TestSkat {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testLoen1() {
+		
+		Skat skat = new Skat();
+		
+		skat.setLoen(10000);
+		
+		assertArrayEquals(10000, skat.getLoen());
 	}
-
 }
