@@ -3,11 +3,12 @@ package model;
 import java.math.BigDecimal;
 
 public class SkatteProcenter {
-
+	private BigDecimal amtSkat;
 	private BigDecimal kommuneSkat;
 
-	public SkatteProcenter(BigDecimal kommuneSkat, BigDecimal bigDecimal) {
+	public SkatteProcenter(BigDecimal kommuneSkat, BigDecimal amtSkat) {
 		this.kommuneSkat = kommuneSkat;
+		this.amtSkat = amtSkat;
 	}
 
 	public BigDecimal getKommuneSkat() {
@@ -15,7 +16,7 @@ public class SkatteProcenter {
 	}
 
 	public BigDecimal getAmtSkat() {
-		return new BigDecimal(1.23);
+		return amtSkat;
 	}
 	
 	

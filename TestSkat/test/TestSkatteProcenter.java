@@ -36,5 +36,14 @@ public class TestSkatteProcenter {
 		
 		assertEquals(amtSkat, sp.getAmtSkat());
 	}
+	
+	@Test
+	public void testAmtSkat2() {
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(2.23));
+		
+		BigDecimal amtSkat = new BigDecimal(2.23);
+		
+		assertEquals(amtSkat, sp.getAmtSkat());
+	}
 
 }
