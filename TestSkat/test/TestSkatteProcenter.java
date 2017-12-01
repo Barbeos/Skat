@@ -55,4 +55,12 @@ public class TestSkatteProcenter {
 		assertEquals(kirkeSkat, sp.getKirkeSkat());
 	}
 
+	@Test
+	public void testKirkeSkat2() {
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1));
+		
+		BigDecimal kirkeSkat = new BigDecimal(0.1);
+		
+		assertEquals(kirkeSkat, sp.getKirkeSkat());
+	}
 }
