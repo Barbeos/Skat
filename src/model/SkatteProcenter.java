@@ -8,19 +8,21 @@ public class SkatteProcenter {
 	private BigDecimal kirkeSkat;
 	private BigDecimal sundhedsBidrag;
 	private BigDecimal bundSkat;
+	private String kommuneNavn;
 	
 
-	public SkatteProcenter(BigDecimal kommuneSkat, BigDecimal amtSkat, BigDecimal kirkeSkat, BigDecimal sundhedsBidrag, BigDecimal bundSkat) {
+	public SkatteProcenter(String kommuneNavn, BigDecimal kommuneSkat, BigDecimal amtSkat, BigDecimal kirkeSkat, BigDecimal sundhedsBidrag, BigDecimal bundSkat) {
 		this.kommuneSkat = kommuneSkat;
 		this.amtSkat = amtSkat;
 		this.kirkeSkat = kirkeSkat;
 		this.sundhedsBidrag = sundhedsBidrag;
 		this.bundSkat = bundSkat;
+		this.kommuneNavn = kommuneNavn;
 	}
 
 	public BigDecimal getKommuneSkat() {
 		return kommuneSkat;
-	}
+	} 
 
 	public BigDecimal getAmtSkat() {
 		return amtSkat;
@@ -39,7 +41,7 @@ public class SkatteProcenter {
 	}
 
 	public String getKommuneNavn() {
-		return "Herning";
+		return kommuneNavn;
 	}
 	
 	
