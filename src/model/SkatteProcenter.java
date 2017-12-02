@@ -9,15 +9,17 @@ public class SkatteProcenter {
 	private BigDecimal sundhedsBidrag;
 	private BigDecimal bundSkat;
 	private String kommuneNavn;
+	private int year;
 	
 
-	public SkatteProcenter(String kommuneNavn, BigDecimal kommuneSkat, BigDecimal amtSkat, BigDecimal kirkeSkat, BigDecimal sundhedsBidrag, BigDecimal bundSkat) {
+	public SkatteProcenter(String kommuneNavn, int year, BigDecimal kommuneSkat, BigDecimal amtSkat, BigDecimal kirkeSkat, BigDecimal sundhedsBidrag, BigDecimal bundSkat) {
 		this.kommuneSkat = kommuneSkat;
 		this.amtSkat = amtSkat;
 		this.kirkeSkat = kirkeSkat;
 		this.sundhedsBidrag = sundhedsBidrag;
 		this.bundSkat = bundSkat;
 		this.kommuneNavn = kommuneNavn;
+		this.year = year;
 	}
 
 	public BigDecimal getKommuneSkat() {
@@ -45,9 +47,6 @@ public class SkatteProcenter {
 	}
 
 	public int getYear() {
-		return 1998;
+		return year;
 	}
-	
-	
-
 }

@@ -32,7 +32,7 @@ public class SkatteProcenterImportFile {
 		 }
 
 		 for(String[] s: tempLines) {
-			 lines.add(new SkatteProcenter(s[0], new BigDecimal(s[1]), new BigDecimal(s[2]), new BigDecimal(s[3]), new BigDecimal(s[4]), new BigDecimal(s[5])));
+			 lines.add(new SkatteProcenter(s[0], Integer.parseInt(s[1]), new BigDecimal(s[2]), new BigDecimal(s[3]), new BigDecimal(s[4]), new BigDecimal(s[5]), new BigDecimal(s[6])));
 		 }
 		 return lines;
 	 }
