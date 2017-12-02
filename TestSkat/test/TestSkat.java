@@ -13,17 +13,17 @@ public class TestSkat {
 		
 		Skat skat = new Skat();
 		
-		skat.setLoen(10000);
+		skat.setLoenIndkomst(10000);
 		
-		assertEquals(10000, skat.getLoen());
+		assertEquals(10000, skat.getLoenIndkomst());
 	}
 	@Test
 	public void testLoen2() {
 		Skat skat = new Skat();
 		
-		skat.setLoen(20000);
+		skat.setLoenIndkomst(20000);
 		
-		assertEquals(20000, skat.getLoen());
+		assertEquals(20000, skat.getLoenIndkomst());
 	}
 	
 	

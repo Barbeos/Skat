@@ -2,14 +2,14 @@ package model;
 
 public class Skat {
 	
-	private int loen;
+	private int loenIndkomst;
 
-	public void setLoen(int loen) {
-	this.loen = loen;	
+	public void setLoenIndkomst(int loenIndkomst) {
+	this.loenIndkomst = loenIndkomst;	
 	}
 
-	public int getLoen() {		
-		return loen;
+	public int getLoenIndkomst() {		
+		return loenIndkomst;
 	}
 
 }
