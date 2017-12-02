@@ -37,6 +37,10 @@ public class SkatteProcenter {
 	public BigDecimal getBundSkat() {
 		return bundSkat;
 	}
+
+	public String getKommuneNavn() {
+		return "Herning";
+	}
 	
 	
 

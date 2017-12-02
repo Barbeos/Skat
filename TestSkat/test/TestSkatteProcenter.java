@@ -99,4 +99,13 @@ public class TestSkatteProcenter {
 		
 		assertEquals(bundSkat, sp.getBundSkat());
 	}
+	
+	@Test
+	public void testKommuneNavn() {
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.02), new BigDecimal(9.06));
+		
+		String kommuneNavn = "Herning";
+		
+		assertEquals(kommuneNavn, sp.getKommuneNavn());
+	}
 }
