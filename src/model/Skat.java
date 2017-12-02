@@ -1,14 +1,16 @@
 package model;
 
+import java.math.BigDecimal;
+
 public class Skat {
 	
-	private int loenIndkomst;
+	private BigDecimal loenIndkomst;
 
-	public void setLoenIndkomst(int loenIndkomst) {
+	public void setLoenIndkomst(BigDecimal loenIndkomst) {
 	this.loenIndkomst = loenIndkomst;	
 	}
 
-	public int getLoenIndkomst() {		
+	public BigDecimal getLoenIndkomst() {		
 		return loenIndkomst;
 	}
 
