@@ -43,6 +43,10 @@ public class SkatteProcenter {
 	public String getKommuneNavn() {
 		return kommuneNavn;
 	}
+
+	public int getYear() {
+		return 1998;
+	}
 	
 	
 

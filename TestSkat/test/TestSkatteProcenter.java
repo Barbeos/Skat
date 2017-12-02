@@ -117,4 +117,13 @@ public class TestSkatteProcenter {
 		
 		assertEquals(kommuneNavn, sp.getKommuneNavn());
 	}
+	
+	@Test
+	public void testyear() {
+		SkatteProcenter sp = new SkatteProcenter("Aalborg" , new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.02), new BigDecimal(9.06));
+		
+		int year = 1998;
+		
+		assertEquals(year, sp.getYear());
+	}
 }
