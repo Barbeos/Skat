@@ -81,4 +81,13 @@ public class TestSkatteProcenter {
 		
 		assertEquals(sundhedsBidrag, sp.getSundhedsBidrag());
 	}
+	
+	@Test
+	public void testBundSkat() {
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.02));
+		
+		BigDecimal bundSkat = new BigDecimal(9.08);
+		
+		assertEquals(bundSkat, sp.getBundSkat());
+	}
 }

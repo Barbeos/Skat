@@ -31,6 +31,10 @@ public class SkatteProcenter {
 	public BigDecimal getSundhedsBidrag() {
 		return sundhedsBidrag;
 	}
+
+	public Object getBundSkat() {
+		return new BigDecimal(9.08);
+	}
 	
 	
 
