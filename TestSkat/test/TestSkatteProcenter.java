@@ -12,7 +12,7 @@ public class TestSkatteProcenter {
 
 	@Test
 	public void testKommuneSkat() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(24.9), new BigDecimal(1.23), null, null);
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(24.9), new BigDecimal(1.23), null, null, null);
 		
 		BigDecimal kommuneSkat = new BigDecimal(24.9);
 		
@@ -21,7 +21,7 @@ public class TestSkatteProcenter {
 	
 	@Test
 	public void testKommuneSkat2() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), null, null);
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), null, null, null);
 		
 		BigDecimal kommuneSkat = new BigDecimal(23.9);
 		
@@ -30,7 +30,7 @@ public class TestSkatteProcenter {
 	
 	@Test
 	public void testAmtSkat() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), null, null);
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), null, null, null);
 		
 		BigDecimal amtSkat = new BigDecimal(1.23);
 		
@@ -39,7 +39,7 @@ public class TestSkatteProcenter {
 	
 	@Test
 	public void testAmtSkat2() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(2.23), null, null);
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(2.23), null, null, null);
 		
 		BigDecimal amtSkat = new BigDecimal(2.23);
 		
@@ -48,7 +48,7 @@ public class TestSkatteProcenter {
 	
 	@Test
 	public void testKirkeSkat() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.2), null);
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.2), null, null);
 		
 		BigDecimal kirkeSkat = new BigDecimal(0.2);
 		
@@ -57,7 +57,7 @@ public class TestSkatteProcenter {
 
 	@Test
 	public void testKirkeSkat2() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), null);
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), null, null);
 		
 		BigDecimal kirkeSkat = new BigDecimal(0.1);
 		
@@ -66,7 +66,7 @@ public class TestSkatteProcenter {
 	
 	@Test
 	public void testSundhedsBidragSkat() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.00));
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.00), null);
 		
 		BigDecimal sundhedsBidrag = new BigDecimal(1.00);
 		
@@ -75,7 +75,7 @@ public class TestSkatteProcenter {
 	
 	@Test
 	public void testSundhedsBidragSkat2() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.02));
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.02), null);
 		
 		BigDecimal sundhedsBidrag = new BigDecimal(1.02);
 		
@@ -84,9 +84,18 @@ public class TestSkatteProcenter {
 	
 	@Test
 	public void testBundSkat() {
-		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.02));
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.02), new BigDecimal(9.08));
 		
 		BigDecimal bundSkat = new BigDecimal(9.08);
+		
+		assertEquals(bundSkat, sp.getBundSkat());
+	}
+	
+	@Test
+	public void testBundSkat2() {
+		SkatteProcenter sp = new SkatteProcenter(new BigDecimal(23.9), new BigDecimal(1.23), new BigDecimal(0.1), new BigDecimal(1.02), new BigDecimal(9.06));
+		
+		BigDecimal bundSkat = new BigDecimal(9.06);
 		
 		assertEquals(bundSkat, sp.getBundSkat());
 	}

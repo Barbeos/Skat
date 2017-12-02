@@ -7,13 +7,15 @@ public class SkatteProcenter {
 	private BigDecimal kommuneSkat;
 	private BigDecimal kirkeSkat;
 	private BigDecimal sundhedsBidrag;
+	private BigDecimal bundSkat;
 	
 
-	public SkatteProcenter(BigDecimal kommuneSkat, BigDecimal amtSkat, BigDecimal kirkeSkat, BigDecimal sundhedsBidrag) {
+	public SkatteProcenter(BigDecimal kommuneSkat, BigDecimal amtSkat, BigDecimal kirkeSkat, BigDecimal sundhedsBidrag, BigDecimal bundSkat) {
 		this.kommuneSkat = kommuneSkat;
 		this.amtSkat = amtSkat;
 		this.kirkeSkat = kirkeSkat;
 		this.sundhedsBidrag = sundhedsBidrag;
+		this.bundSkat = bundSkat;
 	}
 
 	public BigDecimal getKommuneSkat() {
@@ -32,8 +34,8 @@ public class SkatteProcenter {
 		return sundhedsBidrag;
 	}
 
-	public Object getBundSkat() {
-		return new BigDecimal(9.08);
+	public BigDecimal getBundSkat() {
+		return bundSkat;
 	}
 	
 	
