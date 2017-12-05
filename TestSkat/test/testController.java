@@ -20,5 +20,15 @@ public class testController {
 		
 		assertEquals(new BigDecimal(300), c.amtSkat(new BigDecimal(3), s.getLoenIndkomst()));
 	}
+	
+	@Test
+	public void testAmtSkat2() {
+		Controller c = new Controller();
+		Skat s = new Skat();
+		
+		s.setLoenIndkomst(new BigDecimal(1000));
+		
+		assertEquals(new BigDecimal(30), c.amtSkat(new BigDecimal(3), s.getLoenIndkomst()));
+	}
 
 }

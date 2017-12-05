@@ -7,7 +7,7 @@ public class Controller {
 
 
 	public BigDecimal amtSkat(BigDecimal amtSkat, BigDecimal loen) {
-		return new BigDecimal(300);
+		return loen.divide(p).multiply(amtSkat);
 	}
 
 }
