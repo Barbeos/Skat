@@ -11,10 +11,10 @@ import model.SkatteProcenter;
 public class SkatteProcenterImportFile {
 	ArrayList<String> strings;
 	
-	public ArrayList<SkatteProcenter> cSVReader(String fileName) {
+	public ArrayList<SkatteProcenter> cSVReader() {
 		
 		 try {
-			BufferedReader reader = new BufferedReader(new FileReader(fileName));
+			BufferedReader reader = new BufferedReader(new FileReader("skatteprocenter.txt"));
 			strings = new ArrayList<String>();	
 			
 			while(reader.ready()){
@@ -22,7 +22,6 @@ public class SkatteProcenterImportFile {
 			}
 			reader.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		 ArrayList<SkatteProcenter> lines = new ArrayList<SkatteProcenter>();
