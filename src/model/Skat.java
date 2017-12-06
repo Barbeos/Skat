@@ -20,7 +20,7 @@ public class Skat {
 	}
 
 	public BigDecimal getLoenIndkomstEfterFradrag() {
-		return new BigDecimal(17748);
+		return this.loenIndkomst.subtract(this.fradrag);
 	}
 	
 }
