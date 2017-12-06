@@ -17,7 +17,7 @@ public class TestSkat {
 		
 		skat.setLoenIndkomst(new BigDecimal(10000));
 		
-		assertEquals(10000, skat.getLoenIndkomst());
+		assertEquals(new BigDecimal(10000), skat.getLoenIndkomst());
 	}
 	@Test
 	public void testLoen2() {
@@ -25,7 +25,17 @@ public class TestSkat {
 		
 		skat.setLoenIndkomst(new BigDecimal(20000));
 		
-		assertEquals(20000, skat.getLoenIndkomst());
+		assertEquals(new BigDecimal(20000), skat.getLoenIndkomst());
+	}
+	
+	@Test
+	public void testFradrag() {
+		Skat skat = new Skat();
+		
+		skat.setFraDrag(new BigDecimal(42252));
+		skat.setLoenIndkomst(new BigDecimal(60000));
+		
+		assertEquals(new BigDecimal(17748), skat.getLoenIndkomstEfterFradrag());
 	}
 	
 	
