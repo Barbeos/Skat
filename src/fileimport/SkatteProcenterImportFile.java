@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import model.SkatteProcenter;
 
 public class SkatteProcenterImportFile {
-	ArrayList<String> strings;
+	static ArrayList<String> strings;
 	
-	public ArrayList<SkatteProcenter> cSVReader() {
+	public static ArrayList<SkatteProcenter> cSVReader() {
 		
 		 try {
 			BufferedReader reader = new BufferedReader(new FileReader("skatteprocenter.txt"));
