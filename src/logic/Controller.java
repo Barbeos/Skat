@@ -4,19 +4,22 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import fileimport.SkatteProcenterImportFile;
+import model.Skat;
 import model.SkatteProcenter;
 
 public class Controller {
-	private final BigDecimal p = new BigDecimal(100);
 
 	public BigDecimal skatType(BigDecimal SkatType, BigDecimal loen) {
-		return loen.divide(p).multiply(SkatType);
+		return loen.divide(new BigDecimal(100)).multiply(SkatType);
 	}
 
 	public BigDecimal[] skatter(BigDecimal loen, String kommuneNavn, int aarsTal) {
 		BigDecimal[] skatter = new BigDecimal[5];
-		ArrayList<SkatteProcenter> sp = importSkatteProcenter();
-		for (SkatteProcenter s : sp) {
+		
+		Skat skat = new Skat(new BigDecimal(10000), importSkatteProcenter());
+		
+		
+		for (SkatteProcenter s : skat.getSkatteProcenter()) {
 			if (s.getKommuneNavn().equals(kommuneNavn) && s.getYear() == aarsTal) {
 				skatter[0] = skatType(s.getKommuneSkat(), loen);
 				skatter[1] = skatType(s.getAmtSkat(), loen);

@@ -18,9 +18,7 @@ public class testController {
 	@Test
 	public void testSkatType() {
 		Controller c = new Controller();
-		Skat s = new Skat();
-		
-		s.setLoenIndkomst(new BigDecimal(10000));
+		Skat s = new Skat(new BigDecimal(10000), null);
 		
 		assertEquals(new BigDecimal(300), c.skatType(new BigDecimal(3), s.getLoenIndkomst()));
 	}
@@ -28,9 +26,8 @@ public class testController {
 	@Test
 	public void testSkatType2() {
 		Controller c = new Controller();
-		Skat s = new Skat();
+		Skat s = new Skat(new BigDecimal(1000), null);
 		
-		s.setLoenIndkomst(new BigDecimal(1000));
 		
 		assertEquals(new BigDecimal(30), c.skatType(new BigDecimal(3), s.getLoenIndkomst()));
 	}
@@ -38,13 +35,10 @@ public class testController {
 	@Test
 	public void testSkatter() {
 		Controller c = new TestController();
-		Skat s = new Skat();
+		Skat s = new Skat(new BigDecimal(100000), null);
 		//SkatteProcenter sp = new SkatteProcenter("Herning", 2010, new BigDecimal(10), new BigDecimal(5), new BigDecimal(15), new BigDecimal(8), new BigDecimal(6));
 		
-		s.setLoenIndkomst(new BigDecimal(100000));
-		
 		BigDecimal[] skatter = {new BigDecimal(10000), new BigDecimal(5000), new BigDecimal(15000), new BigDecimal(8000), new BigDecimal(6000)};
-		System.out.println(skatter.length + "    "+ c.skatter(s.getLoenIndkomst() , "Herning", 2010).length);
 		
 		assertArrayEquals(skatter, c.skatter(s.getLoenIndkomst() , "Herning", 2010));
 	}
